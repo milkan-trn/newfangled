@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * The plugin bootstrap file
  *
@@ -25,58 +26,171 @@
  * Domain Path:       /languages
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
-/**
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
- */
-define( 'CODESUBMIT_SCHEDULE_DEMO_VERSION', '1.0.0' );
+class Schedule_Demo {
 
-/**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-codesubmit-schedule-demo-activator.php
- */
-function activate_codesubmit_schedule_demo() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-codesubmit-schedule-demo-activator.php';
-	Codesubmit_Schedule_Demo_Activator::activate();
+	public function __construct() {
+		add_shortcode( 'schedule_demo', array( $this, 'render_shortcode' ) );
+		add_action( 'admin_menu', array( $this, 'add_options_page' ) );
+		add_action( 'admin_init', array( $this, 'register_settings' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_shortcode( 'sample-shortcode',array($this, 'schedule_demo_shortcode')  );
+	}
+
+	public function render_shortcode() {
+		$phone_number = get_option( 'availability_modal_phone_number' );
+		$availability = get_option( 'availability_modal_availability', array() );
+		$current_day = date( 'l' );
+		$current_time = date( 'G' );
+		$is_open = false;
+
+		if ( in_array( $current_day, $availability ) && $current_time >= 8 && $current_time < 17 ) {
+			$is_open = true;
+		}
+
+		$html = '<button id="schedule-demo-button" class="button">Schedule a Demo</button>';
+		$html .= '<div id="schedule-demo-modal" class="schedule-demo-modal">';
+		$html .= '<div class="schedule-demo-modal-content">';
+
+		if ( $is_open ) {
+			$html .= '<p>Call us at ' . $phone_number . '</p>';
+		} else {
+			$next_day = null;
+
+			foreach ( $availability as $day ) {
+				if ( strtotime( $day ) > strtotime( $current_day ) ) {
+					$next_day = $day;
+					break;
+				}
+			}
+
+			if ( ! $next_day ) {
+				$next_day = $availability[0];
+			}
+
+			$html .= '<p>We are currently closed. Demos are available again on ' . $next_day . ' at 8am.</p>';
+		}
+
+		$html .= '</div>';
+		$html .= '</div>';
+
+		return $html;
+	}
+
+	public function add_options_page() {
+		add_menu_page( 'Schedule Demo', 'Schedule Demo', 'manage_options', 'schedule-demo', array( $this, 'render_options_page' ),	'dashicons-email-alt', );
+	}
+
+	public function render_options_page() {
+		?>
+		<div class="wrap">
+			<h1>Availabilty (e.g. Monday-Friday, 8am-5pm)</h1>
+			<form method="post" action="options.php">
+				<?php
+					settings_fields( 'schedule_demo_options' );
+					do_settings_sections( 'schedule-demo' );
+					submit_button();
+				?>
+			</form>
+		</div>
+		<?php
+	}
+
+	public function register_settings() {
+		register_setting( 'schedule_demo_options', 'availability_modal_availability', array( $this, 'sanitize_availability' ) );
+		register_setting( 'schedule_demo_options', 'availability_modal_phone_number', 'sanitize_text_field' );
+
+		add_settings_section( 'availability_modal_section', 'Availability', '', 'schedule-demo' );
+		add_settings_field( 'availability_modal_availability', 'Days of Week', array( $this, 'render_availability_field' ), 'schedule-demo', 'availability_modal_section' );
+		add_settings_field( 'availability_modal_phone_number', 'Phone Number', array( $this, 'render_phone_number_field' ), 'schedule-demo', 'availability_modal_section' );
+	}
+
+	public function sanitize_availability( $input ) {
+		return array_map( 'sanitize_text_field', $input );
+	}
+
+	public function render_availability_field() {
+		$availability = get_option( 'availability_modal_availability', array() );
+		$days_of_week = array( 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' );
+		echo '<fieldset>';
+		foreach ( $days_of_week as $day ) {
+			$checked = in_array( $day, $availability ) ? 'checked' : '';
+			echo '<label><input type="checkbox" name="availability_modal_availability[]" value="' . $day . '" ' . $checked . '> ' . $day . '</label><br>';
+		}
+		echo '</fieldset>';
+	}
+
+	public function render_phone_number_field() {
+		$phone_number = get_option( 'availability_modal_phone_number' );
+		echo '<input type="text" name="availability_modal_phone_number" value="' . $phone_number . '">';
+		echo "<p>Add this code to theme file to show button:</br> &lt;?php echo do_shortcode('[sample-shortcode]'); ?&gt;</p>";
+	}
+
+	public function enqueue_scripts() {
+		wp_enqueue_style( 'schedule-demo-modal-style', plugins_url( 'public/css/codesubmit-schedule-demo-public.css', __FILE__ ) );
+		wp_enqueue_script( 'schedule-demo-modal-script', plugins_url( 'public/js/codesubmit-schedule-demo-public.js', __FILE__ ), array( 'jquery' ), '', true );
+	}
+
+	public function schedule_demo_shortcode() {
+		ob_start();
+		$phone_number = get_option( 'availability_modal_phone_number' );
+		$availability = get_option( 'availability_modal_availability', array() );
+		//var_dump($availability );
+		$current_day = date( 'l' );
+		//$current_day = intval($current_day);
+		$current_time = date( 'G' );
+		$open = in_array( $current_day, $availability ) && $current_time >= 8 && $current_time <= 17;
+		?>
+		 <p class="buttonp">
+                <button id="schedule-demo-modal-button" class="button">Schedule a demo</button>&nbsp;&nbsp;&nbsp;to see a preview
+
+            </p>
+		<div id="schedule-demo-modal" class="schedule-demo-modal">
+			<div class="schedule-demo-modal-content">
+				<span class="close">&times;</span>
+				<?php if ( $open ) : ?>
+					<p>Phone Number: <?php echo $phone_number; ?></p>
+				<?php else : ?>
+					<p>Sorry, we are closed now. Demos are available from Monday to Friday between 8am and 5pm.</p>
+					<p>Next available time is: 
+						<?php
+							$next_day = null;
+							//$days_in_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+							// Get today's date
+								$date = new DateTime();
+
+								// Add 24 hours to the date
+								$date->add(new DateInterval('P1D'));
+
+							
+								if ( in_array( $current_day, $availability ) ) {
+									$next_day = $date->format('l');
+								} else {
+									$next_day = $availability[0]; 
+
+								}
+					/* 
+							if ( ! $next_day ) {
+								for ( $i = 0; $i <= $current_day; $i++ ) {
+									if ( in_array( $i, $availability ) ) {
+										$next_day = $i;
+										break;
+									}
+								}
+							} */
+							echo $next_day . ' at 8am';
+						?>
+					</p>
+				<?php endif; ?>
+			</div>
+		</div>
+		<?php
+		return ob_get_clean();
+	}
 }
 
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-codesubmit-schedule-demo-deactivator.php
- */
-function deactivate_codesubmit_schedule_demo() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-codesubmit-schedule-demo-deactivator.php';
-	Codesubmit_Schedule_Demo_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_codesubmit_schedule_demo' );
-register_deactivation_hook( __FILE__, 'deactivate_codesubmit_schedule_demo' );
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path( __FILE__ ) . 'includes/class-codesubmit-schedule-demo.php';
-
-/**
- * Begins execution of the plugin.
- *
- * Since everything within the plugin is registered via hooks,
- * then kicking off the plugin from this point in the file does
- * not affect the page life cycle.
- *
- * @since    1.0.0
- */
-function run_codesubmit_schedule_demo() {
-
-	$plugin = new Codesubmit_Schedule_Demo();
-	$plugin->run();
-
-}
-run_codesubmit_schedule_demo();
+new Schedule_Demo();

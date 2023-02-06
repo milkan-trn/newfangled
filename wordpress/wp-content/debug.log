@@ -1,0 +1,257 @@
+[05-Feb-2023 12:07:29 UTC] PHP Notice:  Constant IMG_DIR already defined in /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/front-page.php on line 6
+[05-Feb-2023 12:07:29 UTC] PHP Stack trace:
+[05-Feb-2023 12:07:29 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/index.php:0
+[05-Feb-2023 12:07:29 UTC] PHP   2. require() /www/kinsta/public/seniorwptest/index.php:17
+[05-Feb-2023 12:07:29 UTC] PHP   3. require_once() /www/kinsta/public/seniorwptest/wp-blog-header.php:19
+[05-Feb-2023 12:07:29 UTC] PHP   4. include() /www/kinsta/public/seniorwptest/wp-includes/template-loader.php:106
+[05-Feb-2023 12:07:29 UTC] PHP   5. define($constant_name = 'IMG_DIR', $value = 'https://seniorwptest.local/wp-content/themes/milkantrninic/assets/img/') /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/front-page.php:6
+[05-Feb-2023 22:53:56 UTC] PHP Parse error:  syntax error, unexpected end of file in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 59
+[05-Feb-2023 22:54:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 60
+[05-Feb-2023 23:10:00 UTC] PHP Notice:  add_submenu_page was called <strong>incorrectly</strong>. The seventh parameter passed to <code>add_submenu_page()</code> should be an integer representing menu position. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.3.0.) in /www/kinsta/public/seniorwptest/wp-includes/functions.php on line 5231
+[05-Feb-2023 23:10:00 UTC] PHP Stack trace:
+[05-Feb-2023 23:10:00 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:0
+[05-Feb-2023 23:10:00 UTC] PHP   2. require_once() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:10
+[05-Feb-2023 23:10:00 UTC] PHP   3. require() /www/kinsta/public/seniorwptest/wp-admin/admin.php:158
+[05-Feb-2023 23:10:00 UTC] PHP   4. require_once() /www/kinsta/public/seniorwptest/wp-admin/menu.php:327
+[05-Feb-2023 23:10:00 UTC] PHP   5. do_action($tag = 'admin_menu', ...$arg = variadic('')) /www/kinsta/public/seniorwptest/wp-admin/includes/menu.php:155
+[05-Feb-2023 23:10:00 UTC] PHP   6. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:10:00 UTC] PHP   7. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:10:00 UTC] PHP   8. availability_modal_settings_page('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:10:00 UTC] PHP   9. add_options_page($page_title = 'Availability Modal Settings', $menu_title = 'Schedule appointment', $capability = 'manage_options', $menu_slug = 'availability_modal', $function = 'availability_modal_settings_page_content', $position = 'dashicons-email-alt') /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php:19
+[05-Feb-2023 23:10:00 UTC] PHP  10. add_submenu_page($parent_slug = 'options-general.php', $page_title = 'Availability Modal Settings', $menu_title = 'Schedule appointment', $capability = 'manage_options', $menu_slug = 'availability_modal', $function = 'availability_modal_settings_page_content', $position = 'dashicons-email-alt') /www/kinsta/public/seniorwptest/wp-admin/includes/plugin.php:1532
+[05-Feb-2023 23:10:00 UTC] PHP  11. _doing_it_wrong($function = 'add_submenu_page', $message = 'The seventh parameter passed to <code>add_submenu_page()</code> should be an integer representing menu position.', $version = '5.3.0') /www/kinsta/public/seniorwptest/wp-admin/includes/plugin.php:1435
+[05-Feb-2023 23:10:00 UTC] PHP  12. trigger_error($message = 'add_submenu_page was called <strong>incorrectly</strong>. The seventh parameter passed to <code>add_submenu_page()</code> should be an integer representing menu position. Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 5.3.0.)', $error_type = 1024) /www/kinsta/public/seniorwptest/wp-includes/functions.php:5231
+[05-Feb-2023 23:10:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /www/kinsta/public/seniorwptest/wp-includes/functions.php:5231) in /www/kinsta/public/seniorwptest/wp-includes/functions.php on line 6276
+[05-Feb-2023 23:10:00 UTC] PHP Stack trace:
+[05-Feb-2023 23:10:00 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:0
+[05-Feb-2023 23:10:00 UTC] PHP   2. require_once() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:10
+[05-Feb-2023 23:10:00 UTC] PHP   3. do_action($tag = 'admin_init') /www/kinsta/public/seniorwptest/wp-admin/admin.php:175
+[05-Feb-2023 23:10:00 UTC] PHP   4. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:10:00 UTC] PHP   5. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:10:00 UTC] PHP   6. send_frame_options_header() /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:285
+[05-Feb-2023 23:10:00 UTC] PHP   7. header($header = 'X-Frame-Options: SAMEORIGIN') /www/kinsta/public/seniorwptest/wp-includes/functions.php:6276
+[05-Feb-2023 23:10:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /www/kinsta/public/seniorwptest/wp-includes/functions.php:5231) in /www/kinsta/public/seniorwptest/wp-admin/includes/misc.php on line 1310
+[05-Feb-2023 23:10:00 UTC] PHP Stack trace:
+[05-Feb-2023 23:10:00 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:0
+[05-Feb-2023 23:10:00 UTC] PHP   2. require_once() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:10
+[05-Feb-2023 23:10:00 UTC] PHP   3. do_action($tag = 'admin_init') /www/kinsta/public/seniorwptest/wp-admin/admin.php:175
+[05-Feb-2023 23:10:00 UTC] PHP   4. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:10:00 UTC] PHP   5. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:10:00 UTC] PHP   6. wp_admin_headers('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:10:00 UTC] PHP   7. header($header = 'Referrer-Policy: strict-origin-when-cross-origin') /www/kinsta/public/seniorwptest/wp-admin/includes/misc.php:1310
+[05-Feb-2023 23:10:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /www/kinsta/public/seniorwptest/wp-includes/functions.php:5231) in /www/kinsta/public/seniorwptest/wp-admin/admin-header.php on line 9
+[05-Feb-2023 23:10:00 UTC] PHP Stack trace:
+[05-Feb-2023 23:10:00 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:0
+[05-Feb-2023 23:10:00 UTC] PHP   2. require_once() /www/kinsta/public/seniorwptest/wp-admin/options-general.php:10
+[05-Feb-2023 23:10:00 UTC] PHP   3. require_once() /www/kinsta/public/seniorwptest/wp-admin/admin.php:239
+[05-Feb-2023 23:10:00 UTC] PHP   4. header($header = 'Content-Type: text/html; charset=UTF-8') /www/kinsta/public/seniorwptest/wp-admin/admin-header.php:9
+[05-Feb-2023 23:24:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 56
+[05-Feb-2023 23:24:12 UTC] PHP Stack trace:
+[05-Feb-2023 23:24:12 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:24:12 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:24:12 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:24:12 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:24:12 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:24:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 57
+[05-Feb-2023 23:24:12 UTC] PHP Stack trace:
+[05-Feb-2023 23:24:12 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:24:12 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:24:12 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:24:12 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:24:12 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:24:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 58
+[05-Feb-2023 23:24:12 UTC] PHP Stack trace:
+[05-Feb-2023 23:24:12 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:24:12 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:24:12 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:24:12 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:24:12 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:24:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 59
+[05-Feb-2023 23:24:12 UTC] PHP Stack trace:
+[05-Feb-2023 23:24:12 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:24:12 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:24:12 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:24:12 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:24:12 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:24:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 60
+[05-Feb-2023 23:24:12 UTC] PHP Stack trace:
+[05-Feb-2023 23:24:12 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:24:12 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:24:12 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:24:12 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:24:12 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:24:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 61
+[05-Feb-2023 23:24:12 UTC] PHP Stack trace:
+[05-Feb-2023 23:24:12 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:24:12 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:24:12 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:24:12 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:24:12 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:24:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 62
+[05-Feb-2023 23:24:12 UTC] PHP Stack trace:
+[05-Feb-2023 23:24:12 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:24:12 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:24:12 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:24:12 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:24:12 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:28:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 56
+[05-Feb-2023 23:28:34 UTC] PHP Stack trace:
+[05-Feb-2023 23:28:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:28:34 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:28:34 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:28:34 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:28:34 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:28:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 57
+[05-Feb-2023 23:28:34 UTC] PHP Stack trace:
+[05-Feb-2023 23:28:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:28:34 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:28:34 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:28:34 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:28:34 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:28:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 58
+[05-Feb-2023 23:28:34 UTC] PHP Stack trace:
+[05-Feb-2023 23:28:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:28:34 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:28:34 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:28:34 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:28:34 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:28:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 59
+[05-Feb-2023 23:28:34 UTC] PHP Stack trace:
+[05-Feb-2023 23:28:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:28:34 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:28:34 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:28:34 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:28:34 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:28:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 60
+[05-Feb-2023 23:28:34 UTC] PHP Stack trace:
+[05-Feb-2023 23:28:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:28:34 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:28:34 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:28:34 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:28:34 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:28:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 61
+[05-Feb-2023 23:28:34 UTC] PHP Stack trace:
+[05-Feb-2023 23:28:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:28:34 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:28:34 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:28:34 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:28:34 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:28:34 UTC] PHP Notice:  Trying to access array offset on value of type bool in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 62
+[05-Feb-2023 23:28:34 UTC] PHP Stack trace:
+[05-Feb-2023 23:28:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:28:34 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:28:34 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:28:34 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:28:34 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:31:36 UTC] PHP Notice:  Undefined index: monday in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 58
+[05-Feb-2023 23:31:36 UTC] PHP Stack trace:
+[05-Feb-2023 23:31:36 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:31:36 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:31:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:31:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:31:36 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:31:36 UTC] PHP Notice:  Undefined index: tuesday in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 59
+[05-Feb-2023 23:31:36 UTC] PHP Stack trace:
+[05-Feb-2023 23:31:36 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:31:36 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:31:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:31:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:31:36 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:31:36 UTC] PHP Notice:  Undefined index: wednesday in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 60
+[05-Feb-2023 23:31:36 UTC] PHP Stack trace:
+[05-Feb-2023 23:31:36 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:31:36 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:31:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:31:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:31:36 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:31:36 UTC] PHP Notice:  Undefined index: thursday in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 61
+[05-Feb-2023 23:31:36 UTC] PHP Stack trace:
+[05-Feb-2023 23:31:36 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:31:36 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:31:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:31:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:31:36 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:31:36 UTC] PHP Notice:  Undefined index: friday in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 62
+[05-Feb-2023 23:31:36 UTC] PHP Stack trace:
+[05-Feb-2023 23:31:36 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:31:36 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:31:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:31:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:31:36 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:31:36 UTC] PHP Notice:  Undefined index: saturday in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 63
+[05-Feb-2023 23:31:36 UTC] PHP Stack trace:
+[05-Feb-2023 23:31:36 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:31:36 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:31:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:31:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:31:36 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:31:36 UTC] PHP Notice:  Undefined index: sunday in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 64
+[05-Feb-2023 23:31:36 UTC] PHP Stack trace:
+[05-Feb-2023 23:31:36 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/wp-admin/admin.php:0
+[05-Feb-2023 23:31:36 UTC] PHP   2. do_action($tag = 'toplevel_page_availability_modal') /www/kinsta/public/seniorwptest/wp-admin/admin.php:259
+[05-Feb-2023 23:31:36 UTC] PHP   3. WP_Hook->do_action($args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/plugin.php:478
+[05-Feb-2023 23:31:36 UTC] PHP   4. WP_Hook->apply_filters($value = '', $args = [0 => '']) /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:311
+[05-Feb-2023 23:31:36 UTC] PHP   5. availability_modal_settings_page_content('') /www/kinsta/public/seniorwptest/wp-includes/class-wp-hook.php:287
+[05-Feb-2023 23:38:37 UTC] PHP Parse error:  syntax error, unexpected end of file in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 134
+[05-Feb-2023 23:39:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Schedule_Demo_Plugin' not found in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php:180
+Stack trace:
+#0 /www/kinsta/public/seniorwptest/wp-settings.php(377): include_once()
+#1 /www/kinsta/public/seniorwptest/wp-config.php(104): require_once('/www/kinsta/pub...')
+#2 /www/kinsta/public/seniorwptest/wp-load.php(37): require_once('/www/kinsta/pub...')
+#3 /www/kinsta/public/seniorwptest/wp-admin/admin-ajax.php(22): require_once('/www/kinsta/pub...')
+#4 {main}
+  thrown in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 180
+[05-Feb-2023 23:39:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Schedule_Demo_Plugin' not found in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php:180
+Stack trace:
+#0 /www/kinsta/public/seniorwptest/wp-settings.php(377): include_once()
+#1 /www/kinsta/public/seniorwptest/wp-config.php(104): require_once('/www/kinsta/pub...')
+#2 /www/kinsta/public/seniorwptest/wp-load.php(37): require_once('/www/kinsta/pub...')
+#3 /www/kinsta/public/seniorwptest/wp-admin/admin.php(34): require_once('/www/kinsta/pub...')
+#4 /www/kinsta/public/seniorwptest/wp-admin/options-general.php(10): require_once('/www/kinsta/pub...')
+#5 {main}
+  thrown in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 180
+[05-Feb-2023 23:53:22 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' or ',' in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 131
+[06-Feb-2023 00:04:34 UTC] PHP Warning:  A non-numeric value encountered in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 160
+[06-Feb-2023 00:04:34 UTC] PHP Stack trace:
+[06-Feb-2023 00:04:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/index.php:0
+[06-Feb-2023 00:04:34 UTC] PHP   2. require() /www/kinsta/public/seniorwptest/index.php:17
+[06-Feb-2023 00:04:34 UTC] PHP   3. require_once() /www/kinsta/public/seniorwptest/wp-blog-header.php:19
+[06-Feb-2023 00:04:34 UTC] PHP   4. include() /www/kinsta/public/seniorwptest/wp-includes/template-loader.php:106
+[06-Feb-2023 00:04:34 UTC] PHP   5. get_template_part($slug = 'template-parts/content', $name = 'frontpage', $args = *uninitialized*) /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/front-page.php:7
+[06-Feb-2023 00:04:34 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/content-frontpage.php', 1 => 'template-parts/content.php'], $load = TRUE, $require_once = FALSE, $args = []) /www/kinsta/public/seniorwptest/wp-includes/general-template.php:204
+[06-Feb-2023 00:04:34 UTC] PHP   7. load_template($_template_file = '/www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/template-parts/content-frontpage.php', $require_once = FALSE, $args = []) /www/kinsta/public/seniorwptest/wp-includes/template.php:676
+[06-Feb-2023 00:04:34 UTC] PHP   8. require() /www/kinsta/public/seniorwptest/wp-includes/template.php:732
+[06-Feb-2023 00:04:34 UTC] PHP   9. do_shortcode($content = '[sample-shortcode]', $ignore_html = *uninitialized*) /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/template-parts/content-frontpage.php:27
+[06-Feb-2023 00:04:34 UTC] PHP  10. preg_replace_callback($regex = '/\\[(\\[?)(sample\\-shortcode)(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)/', $callback = 'do_shortcode_tag', $subject = '[sample-shortcode]') /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:218
+[06-Feb-2023 00:04:34 UTC] PHP  11. do_shortcode_tag($m = [0 => '[sample-shortcode]', 1 => '', 2 => 'sample-shortcode', 3 => '', 4 => '', 5 => '', 6 => '']) /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:218
+[06-Feb-2023 00:04:34 UTC] PHP  12. Schedule_Demo->schedule_demo_shortcode('', '', 'sample-shortcode') /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:343
+[06-Feb-2023 00:04:34 UTC] PHP Warning:  A non-numeric value encountered in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 160
+[06-Feb-2023 00:04:34 UTC] PHP Stack trace:
+[06-Feb-2023 00:04:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/index.php:0
+[06-Feb-2023 00:04:34 UTC] PHP   2. require() /www/kinsta/public/seniorwptest/index.php:17
+[06-Feb-2023 00:04:34 UTC] PHP   3. require_once() /www/kinsta/public/seniorwptest/wp-blog-header.php:19
+[06-Feb-2023 00:04:34 UTC] PHP   4. include() /www/kinsta/public/seniorwptest/wp-includes/template-loader.php:106
+[06-Feb-2023 00:04:34 UTC] PHP   5. get_template_part($slug = 'template-parts/content', $name = 'frontpage', $args = *uninitialized*) /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/front-page.php:7
+[06-Feb-2023 00:04:34 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/content-frontpage.php', 1 => 'template-parts/content.php'], $load = TRUE, $require_once = FALSE, $args = []) /www/kinsta/public/seniorwptest/wp-includes/general-template.php:204
+[06-Feb-2023 00:04:34 UTC] PHP   7. load_template($_template_file = '/www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/template-parts/content-frontpage.php', $require_once = FALSE, $args = []) /www/kinsta/public/seniorwptest/wp-includes/template.php:676
+[06-Feb-2023 00:04:34 UTC] PHP   8. require() /www/kinsta/public/seniorwptest/wp-includes/template.php:732
+[06-Feb-2023 00:04:34 UTC] PHP   9. do_shortcode($content = '[sample-shortcode]', $ignore_html = *uninitialized*) /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/template-parts/content-frontpage.php:27
+[06-Feb-2023 00:04:34 UTC] PHP  10. preg_replace_callback($regex = '/\\[(\\[?)(sample\\-shortcode)(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)/', $callback = 'do_shortcode_tag', $subject = '[sample-shortcode]') /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:218
+[06-Feb-2023 00:04:34 UTC] PHP  11. do_shortcode_tag($m = [0 => '[sample-shortcode]', 1 => '', 2 => 'sample-shortcode', 3 => '', 4 => '', 5 => '', 6 => '']) /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:218
+[06-Feb-2023 00:04:34 UTC] PHP  12. Schedule_Demo->schedule_demo_shortcode('', '', 'sample-shortcode') /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:343
+[06-Feb-2023 00:04:34 UTC] PHP Warning:  A non-numeric value encountered in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 160
+[06-Feb-2023 00:04:34 UTC] PHP Stack trace:
+[06-Feb-2023 00:04:34 UTC] PHP   1. {main}() /www/kinsta/public/seniorwptest/index.php:0
+[06-Feb-2023 00:04:34 UTC] PHP   2. require() /www/kinsta/public/seniorwptest/index.php:17
+[06-Feb-2023 00:04:34 UTC] PHP   3. require_once() /www/kinsta/public/seniorwptest/wp-blog-header.php:19
+[06-Feb-2023 00:04:34 UTC] PHP   4. include() /www/kinsta/public/seniorwptest/wp-includes/template-loader.php:106
+[06-Feb-2023 00:04:34 UTC] PHP   5. get_template_part($slug = 'template-parts/content', $name = 'frontpage', $args = *uninitialized*) /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/front-page.php:7
+[06-Feb-2023 00:04:34 UTC] PHP   6. locate_template($template_names = [0 => 'template-parts/content-frontpage.php', 1 => 'template-parts/content.php'], $load = TRUE, $require_once = FALSE, $args = []) /www/kinsta/public/seniorwptest/wp-includes/general-template.php:204
+[06-Feb-2023 00:04:34 UTC] PHP   7. load_template($_template_file = '/www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/template-parts/content-frontpage.php', $require_once = FALSE, $args = []) /www/kinsta/public/seniorwptest/wp-includes/template.php:676
+[06-Feb-2023 00:04:34 UTC] PHP   8. require() /www/kinsta/public/seniorwptest/wp-includes/template.php:732
+[06-Feb-2023 00:04:34 UTC] PHP   9. do_shortcode($content = '[sample-shortcode]', $ignore_html = *uninitialized*) /www/kinsta/public/seniorwptest/wp-content/themes/milkantrninic/template-parts/content-frontpage.php:27
+[06-Feb-2023 00:04:34 UTC] PHP  10. preg_replace_callback($regex = '/\\[(\\[?)(sample\\-shortcode)(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)/', $callback = 'do_shortcode_tag', $subject = '[sample-shortcode]') /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:218
+[06-Feb-2023 00:04:34 UTC] PHP  11. do_shortcode_tag($m = [0 => '[sample-shortcode]', 1 => '', 2 => 'sample-shortcode', 3 => '', 4 => '', 5 => '', 6 => '']) /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:218
+[06-Feb-2023 00:04:34 UTC] PHP  12. Schedule_Demo->schedule_demo_shortcode('', '', 'sample-shortcode') /www/kinsta/public/seniorwptest/wp-includes/shortcodes.php:343
+[06-Feb-2023 00:18:29 UTC] PHP Parse error:  syntax error, unexpected 'for' (T_FOR) in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 162
+[06-Feb-2023 00:18:29 UTC] PHP Parse error:  syntax error, unexpected 'for' (T_FOR) in /www/kinsta/public/seniorwptest/wp-content/plugins/codesubmit-schedule-demo/codesubmit-schedule-demo.php on line 162
